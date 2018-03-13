@@ -10,23 +10,35 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Pixel Art Maker</h1>
+  <div class="wrapper">
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
+    <header class="main-head">
+      <h1>Pixel Art Maker</h1>
+    </header>
+
+    <div class="side-tools">
+      <h2>Choose Grid Size</h2>
+      <form id="sizePicker">
+          Grid Height:
         <input type="number" id="inputHeight" name="height" min="1" max="50" value="10">
-        Grid Width:
+          Grid Width:
         <input type="number" id="inputWidth" name="width" min="1" max ="50" value="10">
         <input type="submit">
-    </form>
+      </form>
 
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker">
+      <h2>Pick A Color</h2>
+      <input type="color" id="colorPicker">
+    </div>
 
-    <h2>Design Canvas</h2>
-    <table id="pixelCanvas"></table>
+    <div class="canvas-area">
+      <h2>Design Canvas</h2>
+      <table id="pixelCanvas"></table>
+    </div>
 
-    <script src="designs.js"></script>
+    <footer class="main-footer">
+      <h3>Project by tbb</h3>
+    </footer>
+
+  <script src="designs.js"></script>
 </body>
 </html>

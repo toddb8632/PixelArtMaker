@@ -1,3 +1,81 @@
+* {box-sizing: border-box;}
+
+    .wrapper {
+        max-width: 1024px;
+        margin: 0 auto;
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+
+    .wrapper > * {
+        border: 2px solid #f08c00;
+        background-color: #ffec99;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    /* Not using
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    } */
+.main-head {
+  grid-area: header;
+}
+/* Not using
+.main-nav {
+  grid-area: nav;
+} */
+.side-tools {
+  grid-area: sidebar;
+}
+.canvas-area {
+  grid-area: main;
+}
+.main-footer {
+  grid-area: footer;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+}
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header   header"
+      "sidebar  sidebar"
+      "main     main"
+      "footer   footer";
+}
+  /* Not using
+  nav ul {
+    display: flex;
+    justify-: space-between;
+  } */
+}
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+      "header    header   header"
+      "sidebar   main     main"
+      "sidebar   main     main"
+      "footer    footer   footer";
+   }
+   /*Not using
+    nav ul {
+     flex-direction: column;
+   } */
+}
+
+
+/*New CSS added above this===========================================*/
   body {
     text-align: center;
     background-color: #42d4f4;
